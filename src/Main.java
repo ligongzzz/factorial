@@ -1,20 +1,26 @@
 import java.util.*;
+import java.math.BigInteger;
+import java.util.concurrent.*;
+import java.math.*;
 
 public class Main
 {
 	public static void main(String[] args)
 	{
-		System.out.println("Hello World!");
-
-		Scanner input = new Scanner(System.in);
-
-		System.out.print("Enter a number: ");
-		double number1 = input.nextDouble();
-
-		System.out.print("Enter second number: ");
-		double number2 = input.nextDouble();
-
-		double product = number1 * number2;
-		System.out.printf("The product of both numbers is: %f", product);
+		while (true)
+		{
+			System.out.println("Input:");
+			//
+			int a=1;
+			Scanner scanner = new Scanner(System.in); 
+			a = scanner.nextInt();
+			BigInteger b=new BigInteger("1");
+			for (int i=1;i <= a;i++)
+			{
+				BigInteger t=new BigInteger(String.valueOf(i));
+				b = b.multiply(t);
+			}
+			System.out.println(b.toString());
+		}
 	}
 }
